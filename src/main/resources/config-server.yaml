@@ -1,0 +1,15 @@
+server:
+  port: 8090
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          default-label: main
+          uri:
+          search-paths: config-microservice
+          username: ${GIT_USER}
+          password: ${GIT_PASSWORD}
+          skip-ssl-validation: true
+  application:
+    name: config-server
