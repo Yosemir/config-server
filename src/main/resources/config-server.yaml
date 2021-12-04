@@ -1,15 +1,12 @@
 server:
-  port: 8090
+  port: 8081
 spring:
   cloud:
     config:
       server:
         git:
           default-label: main
-          uri:
+          uri: https://github.com/Yosemir/config-server
           search-paths: config-microservice
-          username: ${GIT_USER}
-          password: ${GIT_PASSWORD}
-          skip-ssl-validation: true
   application:
     name: config-server
