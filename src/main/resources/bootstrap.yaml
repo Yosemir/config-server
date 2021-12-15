@@ -7,6 +7,9 @@ spring:
         git:
           default-label: main
           uri: https://github.com/Yosemir/config-server
+          username: ${GIT_USER}
+          password: ${GIT_PASSWORD}
+          skip-ssl-validation: true
           search-paths: config-microservice
   application:
     name: config-server
